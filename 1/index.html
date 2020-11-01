@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@babel/standalone/babel.min.state"></script>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.state"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.state"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+    <a href="#" onclick="console.log('The link was clicked.'); return false">
+      Click me
+    </a>
+</body>
+
+<script type="text/babel">
+const Animals = ['Elephant','Dog','Cat','Mouse']
+
+  class App extends React.Component{
+   state = {
+      name:'Rick',
+      age:'19',
+      Ethnicity:'Africa'
+   }
+
+   handleClick = (e)=>{
+     this.setState({           /* changing the states of events */
+         name:'Van Damme',
+         age:65,
+         Ethnicity:'Latino'
+     });
+     console.log(this.state)
+       console.log(`Yay!! ${this.state.name} clicked on the`,e.target)
+   }
+
+   handleHover = (e)=>{
+            console.log(e, e.pageX,e.pageY)
+    }
+
+    handleCopy = (e)=>{
+      console.log(`Crikey mate!! Be original for once!!`)
+      document.querySelector('.quote').setAttribute("title", "Crikey mate!! Be original for once!!")
+    }
+
+      render(){
+        return(
+          <div>
+              <h1>Welcome To Reactstate</h1>
+              { Animals.map((animal,i)=>
+                <div>
+                  <span>{i +" "}</span>
+                  <span>{ animal}</span>
+                </div>
+              )
+            }
+            <p>My name is: {this.state.name}, I'm {this.state.age} and I'm of {this.state.Ethnicity} descent.</p>
+            <button onClick={this.handleClick}>Click Here</button>
+            <button onMouseOver={this.handleHover}>Hover Me</button>
+            <p className="quote" onCopy={this.handleCopy}>The Age of Computers is an age of Gold</p>
+          </div>
+        )
+      }
+  }
+
+  ReactDOM.render(<App/>,document.getElementById('app'))
+</script>
+</html>

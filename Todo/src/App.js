@@ -1,8 +1,21 @@
-import React from "react";
+import React,{Component} from 'react';
 
-export default () => (
-  <>
-    <h1>Welcome to React Parcel Micro App!</h1>
-    <p>Hard to get more minimal than this React app.</p>
-  </>
-);
+class App extends React.Component{
+   state = {
+   	 todos: [
+   	 { id:1, content:"Take a stroll outside Oxford" },
+   	 { id:2, content:"Go to the Museums gallery " }
+   	  ]
+   }
+
+   render(){
+   	return(
+   		<div>
+   		    <h2>Welcome To Excalibur\'s Todo</h2>
+
+   		</div>
+   	)
+   }
+}
+
+export default App 

@@ -1,23 +1,27 @@
 {
-  "name": "Todo",
+  "name": "todo",
   "version": "0.1.0",
-  "description": "",
+  "description": "The default template project for [nano-react-app](https://github.com/adrianmcli/nano-react-app).",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html"
   },
   "license": "MIT",
   "dependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "@babel/plugin-transform-react-jsx": "^7.12.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.3",
     "babel-preset-nano-react-app": "^0.1.0",
-    "parcel": "^2.0.0-alpha.3.2"
+    "parcel": "^2.0.0-nightly.438"
   },
   "babel": {
     "presets": [
       "nano-react-app"
     ]
-  }
+  },
+  "main": "index.js",
+  "author": ""
 }

@@ -1,0 +1,33 @@
+body{
+	background-color: #fbc6ff;
+}
+ 
+.collection-item{
+	font-size: 15px;
+}
+
+.submit-btn{
+	background-color: #ff213e;
+	border: none;
+	border-radius:5px;
+	padding: 10px;
+	text-align:center;
+	color: white;
+	width: 100%;
+	cursor: pointer;
+}
+
+.submit-btn:hover{
+	opacity: 0.9;
+}
+
+.alert{
+	background-color:#1eb8ff;
+	color: black;
+	opacity: 0.3; 
+	width: 100%;
+	padding: 10px;
+	margin: 0;
+	border-radius:5px;
+}
+

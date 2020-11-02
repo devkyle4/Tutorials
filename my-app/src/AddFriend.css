@@ -1,0 +1,13 @@
+.frndBtn{
+    padding: 8px;
+    background-color: rgb(18, 235, 18);
+    color: white;
+    display: block;
+    border: none;
+    margin: auto;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.frndBtn:hover{
+    opacity: 0.8;
+}
